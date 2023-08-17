@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import MosqueDetails from "./MosqueSystem/MosqueDetails";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AddMosque from "./MosqueSystem/AddMosque";
+import AddTimings from "./MosqueSystem/AddTimings";
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<MosqueDetails/>} />
+          <Route exact path="addMosque" element={<AddMosque/>} />
+          <Route exact path="addTimings" element={<AddTimings/>} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }
