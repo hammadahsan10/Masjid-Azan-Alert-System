@@ -1,13 +1,791 @@
+/* Mosque */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./images/mosque3.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  color: white;
+  overflow: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media only screen and (max-width: 768px) {
+  .element {
+    background-size: contain;
+  }
 }
+
+@media only screen and (max-width: 768px) {
+  .element {
+    background-size: contain;
+  }
+}
+
+.headingCenter
+{
+  /* color: white; */
+  margin: 0 auto;
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+.addmosque
+{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  color: rgb(220, 220, 220);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.table-container {
+  margin: 0 auto;
+  width: auto;
+  height: auto; /* Set the height to whatever value you want */
+  overflow-y: auto;
+  border-radius: 20px 20px 20px 20px;
+}
+
+input[type="datetime-local" i] {
+  color: white !important;
+  opacity: 1;
+  display: block;
+  background-color: white ;
+  background-image: url('https://cdn1.iconfinder.com/data/icons/materia-human/24/013_040_calendar_date_month-512.png') !important;
+  /* width: 20px;
+  /* height: 20px; */ 
+  border-width: thin;
+  /* filter: invert(1); */
+}
+
+input[type="datetime-local" i]::-webkit-datetime-text {
+  color: white !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e66d6d;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #131e4f;
+}
+
+table {
+  background-color: rgb(3, 3, 60);
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+th, td {
+  padding: 13px;
+  text-align: left;
+}
+
+th {
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  background-color: #f48585;
+  text-align: center;
+}
+
+td {
+  font-family:Arial, Helvetica, sans-serif;
+  border: 1px solid #1c0e5f;
+  text-align: center;
+}
+
+.dNone
+{
+  display: none;
+}
+
+.alert {
+  padding: 16px 20px;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.2s;
+  margin-bottom: 15px;
+  width: 20%;
+  border-radius: 10px;
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.audiobtn {
+  color: white;
+  opacity: 1;
+  transition: opacity 0.2s;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  position: fixed;
+  top: 10px;
+  right: 26.5rem;
+  width: 5%;
+  background-color: #3328c4; 
+  border: none;
+  padding: 16px 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+.audiobtn:hover {
+  background-color: #130e61; 
+}
+
+.alert.success 
+{
+  background-color: #06774d;
+  cursor: pointer;
+}
+
+.alert.success:hover
+{
+  background-color: #023c27;
+  cursor: pointer;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.addmosque-form
+{
+  margin: 0 auto;
+  width: 55%;
+}
+
+/* Add Mosque Form */
+
+.login-box  {
+    
+  /* overflow: auto; */
+  position: absolute;
+  margin-top: 17%;
+  left: 50%;
+  width: 560px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(99, 99, 99, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  /* overflow: auto; */
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+
+.login-box .user-box input:valid ~ label  {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 16px;
+}
+
+.login-box form a  {
+
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 20px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.login-box a span  {
+  
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2)  {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3)  {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+
+/* Add Timings Form */
+
+.login-box2  {
+    
+  /* overflow: auto; */
+  position: absolute;
+  margin-top: 17%;
+  left: 50%;
+  width: 560px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(99, 99, 99, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  /* overflow: auto; */
+}
+
+.login-box2 h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.login-box2 .user-box {
+  position: relative;
+}
+
+.login-box2 .user-box input {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box2 .user-box label {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+
+.login-box2 .user-box input:valid ~ label  {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 16px;
+}
+
+.login-box2 form a  {
+
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 20px;
+  letter-spacing: 4px
+}
+
+.login-box2 a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.login-box2 a span  {
+  
+  position: absolute;
+  display: block;
+}
+
+.login-box2 a span:nth-child(1) {
+  
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box2 a span:nth-child(2)  {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box2 a span:nth-child(3)  {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box2 a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+.Timings-Input{
+  height: 36px;
+}
+
+.audioToast
+{
+  position: absolute;
+  width: 50%;
+}
+
+/* Buttons */
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.Timings-Input {
+  height: 14px;
+}
+
+/* For Responsive Add Mosque Form */
+
+@media (min-width:750px) and (max-width: 1050px) {
+
+  .login-box {
+     margin-top: 34%;
+  }
+}
+
+@media (min-width:700px) and (max-width: 750px) {
+
+  .login-box {
+     margin-top: 36%;
+     margin-left: 0%;
+  }
+}
+
+@media (min-width:580px) and (max-width: 700px) {
+
+  .login-box {
+     margin-top: 44%;
+     margin-left: 0%;
+  }
+}
+
+@media (min-width:500px) and (max-width: 580px) {
+
+  .login-box {
+     margin-top: 54%;
+     margin-left: 0%;
+     width: 480px;
+  }
+}
+
+@media (min-width:400px) and (max-width: 500px) {
+
+  .login-box {
+     margin-top: 66%;
+     margin-left: 0%;
+     width: 380px;
+  }
+}
+
+@media  (max-width: 400px) {
+
+  .login-box {
+    width: 320px;
+   margin-top: 69%;
+   margin-left: 0%;
+}
+}
+
+
+/* For Responsive Add Timings Form */
+
+@media (min-width:900px) and (max-width: 1360px) {
+
+  .login-box2 {
+     margin-top: 30%;
+  }
+}
+
+@media (min-width:700px) and (max-width: 900px) {
+
+  .login-box2 {
+     margin-top: 40%;
+  }
+}
+
+@media (min-width:560px) and (max-width: 700px) {
+
+  .login-box2 {
+     margin-top: 50%;
+     margin-left: 0%;
+  }
+}
+
+@media (min-width:430px) and (max-width: 560px) {
+
+  .login-box2 {
+     width: 400px;
+     margin-top: 69%;
+     margin-left: 0%;
+  }
+}
+
+@media (max-width: 430px) {
+
+  .login-box2 {
+      width: 360px;
+     margin-top: 92%;
+     margin-left: 0%;
+  }
+}
+
+
